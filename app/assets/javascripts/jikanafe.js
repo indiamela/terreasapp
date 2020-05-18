@@ -1,6 +1,6 @@
 $(function() {
-  $(".tabmenu a").click(function() {  //tabmenuクラスのaタグのクリックイベント
-    $(this).parent().addClass("active").siblings(".active").removeClass("active"); //親のliをとってactiveくラスを加え、同階層のactiveクラスを削除している
+  $(".tabmenu li").click(function() {  //tabmenuクラスのaタグのクリックイベント
+    $(this).addClass("active").siblings(".active").removeClass("active"); //親のliをとってactiveくラスを加え、同階層のactiveクラスを削除している
     var tabContents = $(this).attr("href");　　//hrefのidを取得
     $(tabContents).addClass("show").siblings(".show").removeClass("show");
     return false;
@@ -21,18 +21,94 @@ $(function() {
     var Ms = toTime-fromTime
     var h = ''
     var m = ''
-    h = Ms/3600000
-    m = (Ms-h*3600000)/6000
-    var jikan = h+m;
-
-    // switch (difTime) {
-    //   case '01:00':
-    //     $('.adult-price').text('ああああ');
-    //     break;
-    //   default:
-    //     $('.adult-price').text('いいいいい');
-    //     break;
-    // }
+    h = Ms/60000
+    m = (Ms-h*60000)/100
+    var x = h+m;
+    if(x<=0){
+      $('.adult-price').text('0円');
+      $('.student-price').text('0円');
+    }
+    else if (x<=30){
+      $('.adult-price').text('330円');
+      $('.student-price').text('330円');
+    }
+    else if(x<=40){
+      $('.adult-price').text('430円');
+      $('.student-price').text('430円');
+    }
+    else if(x<=50){
+      $('.adult-price').text('530円');
+      $('.student-price').text('530円');
+    }
+    else if(x<=60){
+      $('.adult-price').text('630円');
+      $('.student-price').text('550円');
+    }
+    else if(x<=70){
+      $('.adult-price').text('730円');
+      $('.student-price').text('550円');
+    }
+    else if(x<=80){
+      $('.adult-price').text('830円');
+      $('.student-price').text('550円');
+    }
+    else if(x<=90){
+      $('.adult-price').text('930円');
+      $('.student-price').text('550円');
+    }
+    else if(x<=100){
+      $('.adult-price').text('1000円');
+      $('.student-price').text('600円');
+    }
+    else if(x<=110){
+      $('.adult-price').text('1000円');
+      $('.student-price').text('650円');
+    }
+    else if(x<=120){
+      $('.adult-price').text('1000円');
+      $('.student-price').text('700円');
+    }
+    else if(x<=130){
+      $('.adult-price').text('1100円');
+      $('.student-price').text('750円');
+    }
+    else if(x<=140){
+      $('.adult-price').text('1200円');
+      $('.student-price').text('800円');
+    }
+    else if(x<=150){
+      $('.adult-price').text('1300円');
+      $('.student-price').text('850円');
+    }
+    else if(x<=160){
+      $('.adult-price').text('1400円');
+      $('.student-price').text('900円');
+    }
+    else if(x<=170){
+      $('.adult-price').text('1500円');
+      $('.student-price').text('950円');
+    }
+    else if(x<=180){
+      $('.adult-price').text('1500円');
+      $('.student-price').text('1000円');
+    }
+    else if(x<=190){
+      $('.adult-price').text('1600円');
+      $('.student-price').text('1100円');
+    }
+    else if(x<=200){
+      $('.adult-price').text('1700円');
+      $('.student-price').text('1200円');
+    }
+    else if(x<=210){
+      $('.adult-price').text('1800円');
+      $('.student-price').text('1300円');
+    }
+    else{
+      $('.adult-price').text('1900円');
+      $('.student-price').text('1400円');
+    }
+    return false;
   });
 });
 

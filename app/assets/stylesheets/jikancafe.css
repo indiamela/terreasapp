@@ -16,8 +16,14 @@ a {
   color: white;
 }
 
-li{
-  color: black;}
+.tabmenu li{
+  color: black;
+  cursor: pointer;
+}
+.tabmenu li:hover {
+  background: #67c5ff;
+  color: white;
+}
 
 .contents {
   list-style: none;
