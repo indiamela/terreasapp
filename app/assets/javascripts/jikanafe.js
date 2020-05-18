@@ -1,23 +1,23 @@
-// $(function(){
-//   let tabs = $('.menu_item');
-
-//   function tabSwitch(){
-//     $('.active').removeClass('active'); //activeクラスの削除
-//     $(this).addClass('active');
-//     const index = tabs.index(this);
-//     $('.content').removeClass('show').eq(index).addClass('show');
-//   }
-
-//   tabs.click(tabSwitch);
-// });
-
-
 $(function() {
   $(".tabmenu a").click(function() {  //tabmenuクラスのaタグのクリックイベント
     $(this).parent().addClass("active").siblings(".active").removeClass("active"); //親のliをとってactiveくラスを加え、同階層のactiveクラスを削除している
     var tabContents = $(this).attr("href");　　//hrefのidを取得
     $(tabContents).addClass("show").siblings(".show").removeClass("show");
     return false;
+  });
+  $('button').click(function(){
+    var startTime=$('input[name="start_time"]').val();
+    var lastTime=$('input[name="last_time"]').val();
+    var difTime = lastTime-startTime
+    alert(difTime);
+    // switch (difTime) {
+    //   case '01:00':
+    //     $('.adult-price').text('ああああ');
+    //     break;
+    //   default:
+    //     $('.adult-price').text('いいいいい');
+    //     break;
+    // }
   });
 });
 
