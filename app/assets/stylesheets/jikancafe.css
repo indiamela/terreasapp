@@ -1,0 +1,29 @@
+/* .tabmenu {
+  list-style: none;
+}
+li.menu_item{
+  color: black;
+}
+.active{
+  color: red;
+}
+
+.contents {
+  list-style: none;
+} */
+.tabmenu li{
+  list-style: none;
+}
+.content{
+  display: none;
+}
+.active{
+  display: block;
+}
+
+/* .tabContents {
+  display: none;
+}
+.tabContents.active {
+  display: block;
+} */
