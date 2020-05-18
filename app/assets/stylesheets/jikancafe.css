@@ -1,23 +1,34 @@
-/* .tabmenu {
-  list-style: none;
+a {
+  color: #666666;
+  text-decoration: none;
 }
-li.menu_item{
-  color: black;
+.tab-btn{
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
 }
 .active{
-  color: red;
+  background: #67c5ff;
+  color: white;
 }
+
+li{
+  color: black;}
 
 .contents {
   list-style: none;
-} */
+}
 .tabmenu li{
   list-style: none;
 }
 .content{
   display: none;
 }
-.active{
+.show{
   display: block;
 }
 

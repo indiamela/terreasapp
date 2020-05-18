@@ -13,10 +13,15 @@
 
 
 $(function() {
-  $(".tabmenu a").click(function() {
-    $(this).parent().addClass("active").siblings(".active").removeClass("active");
-    var tabContents = $(this).attr("href");
-    $(tabContents).addClass("active").siblings(".active").removeClass("active");
+  $(".tabmenu a").click(function() {  //tabmenuクラスのaタグのクリックイベント
+    $(this).parent().addClass("active").siblings(".active").removeClass("active"); //親のliをとってactiveくラスを加え、同階層のactiveクラスを削除している
+    var tabContents = $(this).attr("href");　　//hrefのidを取得
+    $(tabContents).addClass("show").siblings(".show").removeClass("show");
     return false;
   });
 });
+
+// 学び
+// next()→対象の要素の次の要素を取得できる
+// nextAll()→対象の要素以降を全て取得
+// siblings()→同階層の要素を全て取得できる
