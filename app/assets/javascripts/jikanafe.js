@@ -1,11 +1,6 @@
 $(function() {
-  $(".tabmenu li").click(function() {  //tabmenuクラスのaタグのクリックイベント
-    $(this).addClass("active").siblings(".active").removeClass("active"); //親のliをとってactiveくラスを加え、同階層のactiveクラスを削除している
-    var tabContents = $(this).attr("href");　　//hrefのidを取得
-    $(tabContents).addClass("show").siblings(".show").removeClass("show");
-    return false;
-  });
-  $('button').click(function(e){
+  // var currentButton = $('.show submit')
+  $('button').click(function(){
     //開始時間と終了時間の取得
     var startTime=$('input[name="start_time"]').val();
     var lastTime=$('input[name="last_time"]').val();
@@ -24,7 +19,7 @@ $(function() {
     h = Ms/60000
     m = (Ms-h*60000)/100
     var x = h+m;
-    if(x<=0){
+    if (x<=0){
       $('.adult-price').text('0円');
       $('.student-price').text('0円');
     }
@@ -108,6 +103,12 @@ $(function() {
       $('.adult-price').text('1900円');
       $('.student-price').text('1400円');
     }
+    return false;
+  });
+  $(".tabmenu a").click(function() {  //tabmenuクラスのクリックイベント
+    $(this).parent().addClass("active").siblings(".active").removeClass("active"); //activeくラスを加え、同階層のactiveクラスを削除している
+    var tabContents = $(this).attr("href");　　//hrefのidを取得
+    $(tabContents).addClass("show").siblings(".show").removeClass("show");
     return false;
   });
 });
