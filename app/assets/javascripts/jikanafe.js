@@ -1,5 +1,4 @@
 $(function() {
-  // var currentButton = $('.show submit')
   $('button').click(function(){
     //開始時間と終了時間の取得
     var startTime=$('input[name="start_time"]').val();
