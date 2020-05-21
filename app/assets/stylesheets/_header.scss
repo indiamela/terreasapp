@@ -1,0 +1,32 @@
+.header {
+  height: 100px;
+  width: 100%;
+  padding: 10px;
+  border-bottom: solid 1px $gray;
+  display: inline-block; 
+  vertical-align: middle;
+  &__left{
+    float: left;
+  }
+  &__right{
+    float:right;
+    ul{
+      position: relative;
+      bottom: 0;
+      li{
+        display: inline-block;
+        padding: 0.3em 1em;
+        text-decoration: none;
+        color: $lightblue;
+        border: solid 2px $lightblue;
+        border-radius: 3px;
+        transition: .4s;
+        &:hover{
+          background: #67c5ff;
+          color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
