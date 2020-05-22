@@ -1,10 +1,20 @@
 $(function() {
-  $('nowtime').click(function(e){
+  //ymdを作る
+  var Y = new Date().getFullYear()
+  var M = new Date().getMonth()+1
+  var D = new Date().getDate()
+  var ymd = Y+"/"+M+"/"+D+"/"
+  var Hour = new Date().getHours();
+  var Min = new Date().getMinutes();
+  $('.nowtime-start').click(function(e){
     e.preventDefault();
     var $form = $(e.currentTarget).parents('form');
-    var getTime = jQuery.now();
-
-
+    $form.find('input[name="start_time"]').val(Hour+':'+Min);
+  })
+  $('.nowtime-end').click(function(e){
+    e.preventDefault();
+    var $form = $(e.currentTarget).parents('form');
+    $form.find('input[name="last_time"]').val(Hour+':'+Min);
   })
 
   $('.calcbutton').click(function(e){
@@ -13,14 +23,8 @@ $(function() {
     var adultPrice = $form.find('.adult-price');
     var studentPrice = $form.find('.student-price');
     //開始時間と終了時間の取得
-    
     var startTime=$form.find('input[name="start_time"]').val();
     var lastTime=$form.find('input[name="last_time"]').val();
-    //ymdを作る
-    var Y = new Date().getFullYear()
-    var M = new Date().getMonth()+1
-    var D = new Date().getDate()
-    var ymd = Y+"/"+M+"/"+D+"/"
     //年から時間まで作った後に時間部分を数値として切り出す
     var fromTime = new Date(ymd+" "+startTime).getTime()
     var toTime = new Date(ymd+' '+lastTime).getTime()
