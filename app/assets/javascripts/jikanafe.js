@@ -1,25 +1,32 @@
 $(function() {
-  //ymdを作る
+  function toDoubleDigits(i) {
+    if (i < 10) {
+    i = "0" + i;
+    }
+    return i;
+    }
   var Y = new Date().getFullYear()
   var M = new Date().getMonth()+1
   var D = new Date().getDate()
+  var hh = new Date().getHours();
+  var mm = new Date().getMinutes();
+  var H = toDoubleDigits(hh)
+  var M = toDoubleDigits(mm)
   var ymd = Y+"/"+M+"/"+D+"/"
-  var Hour = new Date().getHours();
-  var Min = new Date().getMinutes();
   $('.nowtime-start').click(function(e){
     e.preventDefault();
     var $form = $(e.currentTarget).parents('form');
-    $form.find('input[name="start_time"]').val(Hour+':'+Min);
+    $form.find('input[name="start_time"]').val(H+':'+M);
   })
   $('.nowtime-end').click(function(e){
     e.preventDefault();
     var $form = $(e.currentTarget).parents('form');
-    $form.find('input[name="last_time"]').val(Hour+':'+Min);
+    $form.find('input[name="last_time"]').val(H+':'+M);
   })
 
   $('.calcbutton').click(function(e){
     e.preventDefault();
-    var $form = $(e.currentTarget).parents('form');
+    var $form = $(e.currentTarget).parents('form');  //現在いるフォームだけに適用する
     var adultPrice = $form.find('.adult-price');
     var studentPrice = $form.find('.student-price');
     //開始時間と終了時間の取得
@@ -134,3 +141,4 @@ $(function() {
 // nextAll()→対象の要素以降を全て取得
 // siblings()→同階層の要素を全て取得できる
 // 時間計算するには入力した時間を数値として切り出す必要がある
+// 
