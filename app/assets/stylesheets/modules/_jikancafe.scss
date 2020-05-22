@@ -1,0 +1,70 @@
+.jikan{
+  display: inline-block;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h1{
+    margin: 20px;
+    font-size: 30px;
+  }
+  a {
+    color: $gray;
+  }
+
+  .tab-btn {
+    width: 70px;
+    display: inline-block;
+    padding: 0.3em 1em;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
+  }
+
+  .active {
+    background: #67c5ff;
+    color: white;
+  }
+
+  ul.tabmenu{
+    >li {
+      color: $black;
+      cursor: pointer;
+      margin: 20px 10px;
+      &:hover {
+        background: #67c5ff;
+        color: white;
+      }
+    }
+  }
+  ul.contents {
+    margin: 20px;
+    .content {
+      display: none;
+      form {
+        dl{
+          dt {
+            float: left;
+            clear: both;
+            padding: 10px 0;
+          }
+          dd {
+            padding: 10px 0;
+          }
+        }
+        button {
+          font-size: 20px;
+          margin: 30px;
+        }
+      }
+      .price {
+        margin: 20px;
+      }
+    }
+    .show {
+      display: block;
+    }
+  }
+}

@@ -1,8 +1,21 @@
 $(function() {
-  $('button').click(function(){
+  $('nowtime').click(function(e){
+    e.preventDefault();
+    var $form = $(e.currentTarget).parents('form');
+    var getTime = jQuery.now();
+
+
+  })
+
+  $('.calcbutton').click(function(e){
+    e.preventDefault();
+    var $form = $(e.currentTarget).parents('form');
+    var adultPrice = $form.find('.adult-price');
+    var studentPrice = $form.find('.student-price');
     //開始時間と終了時間の取得
-    var startTime=$('input[name="start_time"]').val();
-    var lastTime=$('input[name="last_time"]').val();
+    
+    var startTime=$form.find('input[name="start_time"]').val();
+    var lastTime=$form.find('input[name="last_time"]').val();
     //ymdを作る
     var Y = new Date().getFullYear()
     var M = new Date().getMonth()+1
@@ -19,88 +32,88 @@ $(function() {
     m = (Ms-h*60000)/100
     var x = h+m;
     if (x<=0){
-      $('.adult-price').text('0円');
-      $('.student-price').text('0円');
+      adultPrice.text('大人料金：0円');
+      studentPrice.text('学生料金：0円');
     }
     else if (x<=30){
-      $('.adult-price').text('330円');
-      $('.student-price').text('330円');
+      adultPrice.text('大人料金：330円');
+      studentPrice.text('学生料金：330円');
     }
     else if(x<=40){
-      $('.adult-price').text('430円');
-      $('.student-price').text('430円');
+      adultPrice.text('大人料金：430円');
+      studentPrice.text('学生料金：430円');
     }
     else if(x<=50){
-      $('.adult-price').text('530円');
-      $('.student-price').text('530円');
+      adultPrice.text('大人料金：530円');
+      studentPrice.text('学生料金：530円');
     }
     else if(x<=60){
-      $('.adult-price').text('630円');
-      $('.student-price').text('550円');
+      adultPrice.text('大人料金：630円');
+      studentPrice.text('学生料金：550円');
     }
     else if(x<=70){
-      $('.adult-price').text('730円');
-      $('.student-price').text('550円');
+      adultPrice.text('大人料金：730円');
+      studentPrice.text('学生料金：550円');
     }
     else if(x<=80){
-      $('.adult-price').text('830円');
-      $('.student-price').text('550円');
+      adultPrice.text('大人料金：830円');
+      studentPrice.text('学生料金：550円');
     }
     else if(x<=90){
-      $('.adult-price').text('930円');
-      $('.student-price').text('550円');
+      adultPrice.text('大人料金：930円');
+      studentPrice.text('学生料金：550円');
     }
     else if(x<=100){
-      $('.adult-price').text('1000円');
-      $('.student-price').text('600円');
+      adultPrice.text('大人料金：1000円');
+      studentPrice.text('学生料金：600円');
     }
     else if(x<=110){
-      $('.adult-price').text('1000円');
-      $('.student-price').text('650円');
+      adultPrice.text('大人料金：1000円');
+      studentPrice.text('学生料金：650円');
     }
     else if(x<=120){
-      $('.adult-price').text('1000円');
-      $('.student-price').text('700円');
+      adultPrice.text('大人料金：1000円');
+      studentPrice.text('学生料金：700円');
     }
     else if(x<=130){
-      $('.adult-price').text('1100円');
-      $('.student-price').text('750円');
+      adultPrice.text('大人料金：1100円');
+      studentPrice.text('学生料金：750円');
     }
     else if(x<=140){
-      $('.adult-price').text('1200円');
-      $('.student-price').text('800円');
+      adultPrice.text('大人料金：1200円');
+      studentPrice.text('学生料金：800円');
     }
     else if(x<=150){
-      $('.adult-price').text('1300円');
-      $('.student-price').text('850円');
+      adultPrice.text('大人料金：1300円');
+      studentPrice.text('学生料金：850円');
     }
     else if(x<=160){
-      $('.adult-price').text('1400円');
-      $('.student-price').text('900円');
+      adultPrice.text('大人料金：1400円');
+      studentPrice.text('学生料金：900円');
     }
     else if(x<=170){
-      $('.adult-price').text('1500円');
-      $('.student-price').text('950円');
+      adultPrice.text('大人料金：1500円');
+      studentPrice.text('学生料金：950円');
     }
     else if(x<=180){
-      $('.adult-price').text('1500円');
-      $('.student-price').text('1000円');
+      adultPrice.text('大人料金：1500円');
+      studentPrice.text('学生料金：1000円');
     }
     else if(x<=190){
-      $('.adult-price').text('1600円');
-      $('.student-price').text('1100円');
+      adultPrice.text('大人料金：1600円');
+      studentPrice.text('学生料金：1100円');
     }
     else if(x<=200){
-      $('.adult-price').text('1700円');
-      $('.student-price').text('1200円');
+      adultPrice.text('大人料金：1700円');
+      studentPrice.text('学生料金：1200円');
     }
     else if(x<=210){
-      $('.adult-price').text('1800円');
-      $('.student-price').text('1300円');
+      adultPrice.text('大人料金：1800円');
+      studentPrice.text('学生料金：1300円');
     }
     else{
-      $('.adult-price').text('1900円');
-      $('.student-price').text('1400円');
+      adultPrice.text('大人料金：1900円');
+      studentPrice.text('学生料金：1400円');
     }
     return false;
   });

@@ -1,15 +1,15 @@
-%span.jikan
-  %form
-    %dl
-      %dt 開始時間
-      %dd
-        %input{:autofocus => "true", :max => "23:00", :min => "11:00", :name => "start_time", :required => "", :type => "time", :value => "11:00"}/
-      %dt 終了時間
-      %dd
-        %input{:name => "last_time", :required => "", :type => "time", :value => "11:00"}/
-    %button{:type => "submit"} 計算
-%span.price
-  %p 大人料金
-  %p.adult-price
-  %p 学生料金
-  %p.student-price
+%form
+  .time
+  %dl
+    %dt 開始時間
+    %dd
+      %input{:autofocus => "true", :max => "23:00", :min => "11:00", :name => "start_time", :required => "", :type => "time", :value => "11:00"}/
+      %button.nowtime 現在時間
+    %dt 終了時間
+    %dd
+      %input{:name => "last_time", :required => "", :type => "time", :value => "11:00"}/
+      %button.nowtime 現在時間
+  %button.calcbutton{:type => "submit"} 計算
+  .price
+    %p.adult-price 
+    %p.student-price

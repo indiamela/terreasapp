@@ -1,38 +1,36 @@
-%h1.title
-  時間カフェ計算
-  %ul.tabmenu
-    %li.tab-btn.active
-      %a{:href => "#1"} k1
-    %li.tab-btn
-      %a{:href => "#2"} k2
-    %li.tab-btn
-      %a{:href => "#3"} k3
-    %li.tab-btn
-      %a{:href => "#4"} k4
-    %li.tab-btn
-      %a{:href => "#5"} k5
-    %li.tab-btn
-      %a{:href => "#6"} k6
-    %li.tab-btn
-      %a{:href => "#7"} k7
-    %li.tab-btn
-      %a{:href => "#8"} k8
-    %li.tab-btn
-      %a{:href => "#9"} k9
-    %li.tab-btn
-      %a{:href => "#10"} k10
-  %ul.contents
-    %li#1.content.show
-      = render partial:'form'
-      1
-    %li#2.content
-      = render partial:'form'
-      2
-    %li#3.content= render partial:'form'
-    %li#4.content= render partial:'form'
-    %li#5.content= render partial:'form'
-    %li#6.content= render partial:'form'
-    %li#7.content= render partial:'form'
-    %li#8.content= render partial:'form'
-    %li#9.content= render partial:'form'
-    %li#10.content= render partial:'form'
+.wrapper.jikan
+  .title
+    %h1.title 時間カフェ計算
+    %ul.tabmenu
+      %li.tab-btn.active
+        %a{:href => "#1"} k1
+      %li.tab-btn
+        %a{:href => "#2"} k2
+      %li.tab-btn
+        %a{:href => "#3"} k3
+      %li.tab-btn
+        %a{:href => "#4"} k4
+      %li.tab-btn
+        %a{:href => "#5"} k5
+    %ul.tabmenu
+      %li.tab-btn
+        %a{:href => "#6"} k6
+      %li.tab-btn
+        %a{:href => "#7"} k7
+      %li.tab-btn
+        %a{:href => "#8"} k8
+      %li.tab-btn
+        %a{:href => "#9"} k9
+      %li.tab-btn
+        %a{:href => "#10"} k10
+    %ul.contents
+      %li#1.content.show= render partial:'form'
+      %li#2.content= render partial:'form'
+      %li#3.content= render partial:'form'
+      %li#4.content= render partial:'form'
+      %li#5.content= render partial:'form'
+      %li#6.content= render partial:'form'
+      %li#7.content= render partial:'form'
+      %li#8.content= render partial:'form'
+      %li#9.content= render partial:'form'
+      %li#10.content= render partial:'form'
