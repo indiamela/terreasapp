@@ -10,9 +10,9 @@ $(function() {
   var D = new Date().getDate()
   var hh = new Date().getHours();
   var mm = new Date().getMinutes();
-  var H = toDoubleDigits(hh)
-  var M = toDoubleDigits(mm)
   var ymd = Y+"/"+M+"/"+D+"/"
+  var H = toDoubleDigits(hh);
+  var M = toDoubleDigits(mm);
   $('.nowtime-start').click(function(e){
     e.preventDefault();
     var $form = $(e.currentTarget).parents('form');
@@ -23,7 +23,6 @@ $(function() {
     var $form = $(e.currentTarget).parents('form');
     $form.find('input[name="last_time"]').val(H+':'+M);
   })
-
   $('.calcbutton').click(function(e){
     e.preventDefault();
     var $form = $(e.currentTarget).parents('form');  //現在いるフォームだけに適用する
@@ -33,8 +32,8 @@ $(function() {
     var startTime=$form.find('input[name="start_time"]').val();
     var lastTime=$form.find('input[name="last_time"]').val();
     //年から時間まで作った後に時間部分を数値として切り出す
-    var fromTime = new Date(ymd+" "+startTime).getTime()
-    var toTime = new Date(ymd+' '+lastTime).getTime()
+    var fromTime = new Date(ymd+" "+startTime).getTime();
+    var toTime = new Date(ymd+' '+lastTime).getTime();
     //時間計算
     var Ms = toTime-fromTime
     var h = ''
@@ -130,7 +129,7 @@ $(function() {
   });
   $(".tabmenu a").click(function() {  //tabmenuクラスのクリックイベント
     $(this).parent().addClass("active").siblings(".active").removeClass("active"); //activeくラスを加え、同階層のactiveクラスを削除している
-    var tabContents = $(this).attr("href");　　//hrefのidを取得
+    var tabContents = $(this).attr("href");//hrefのidを取得
     $(tabContents).addClass("show").siblings(".show").removeClass("show");
     return false;
   });
