@@ -1,14 +1,16 @@
 %div.main
-  .category
-    .category__top
-      .titile
-        営業時間変更のお知らせ
-      .buttons
-        .button__edit
-          =icon("fas","edit","編集")
-        .button__delete
-          =icon("far","trash-alt","削除")
-    .category__bottom
+  .content
+    .content__top
+      .headarea
+        #date
+        #button
+          .button__edit
+            =icon("fas","edit","編集")
+          .button__delete
+            =icon("far","trash-alt","削除")
+      .main-title
+        %h1 営業時間変更のお知らせ
+    .content__bottom
       .text
         5号¥3500（+税）
         →6〜8名さま分

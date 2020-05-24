@@ -1,23 +1,79 @@
 .side-bar {
   float: left;
   width: 600px;
-  height: 100vh;
+  height: calc(100vh - 100px);
   .CategoryMenu{
+    background-color: $G;
+    color: $white;
     float: left;
-    width: 300px;
+    width: 250px;
     height: 100%;
-    border: solid 1px;
+    border-right: solid 3px;
     border-collapse: collapse;
+    ul{
+      li{
+        padding: 20px 20px 0;
+        .icon{
+          float: left;
+          @include clearfix();
+          padding: 5px 10px 0 0;
+        }
+        .title {
+        }
+      }
+    }
   }
   .ItemMenu{
+    color: $black;
     float: left;
-    width: 300px;
+    width: 350px;
     height: 100%;
-    border: solid 1px;
-    border-collapse: collapse;
+    padding: 5px;
+    border-right: solid 3px white;
+    ul{
+      li {
+        background-color: $white;
+        padding: 2px 5px;
+        margin-bottom: 5px;
+        @include clearfix();
+        #date {
+          font-size: 15px;
+          float: left;
+        }
+      }
+    }
   }
 }
 .main{
-  width: calc(100vw-600px);
-  height: 100vh;
+  width: calc(100% - 600px);
+  height: calc(100vh - 100px);
+  padding: 20px;
+  float: right;
+  .content {
+    &__top {
+      width: 100v;
+      height: 100px;
+      #button {
+        float: right;
+        width: 100px;
+        &__edit{
+          padding: 5px 10px 0 0;
+          float: left;
+          @include clearfix();
+        }
+        &__delete {
+          float: left;
+        }
+      }
+      .main-title {
+        display: block;
+        width: calc(100% - 20px);
+        background-color: $white;
+        padding: 5px;
+      }
+    }
+    &__bottom{
+
+    }
+  }
 }
