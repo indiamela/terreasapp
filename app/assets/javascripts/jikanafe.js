@@ -5,12 +5,8 @@ $(function() {
     }
     return i;
     }
-  var Y = new Date().getFullYear()
-  var M = new Date().getMonth()+1
-  var D = new Date().getDate()
   var hh = new Date().getHours();
   var mm = new Date().getMinutes();
-  var ymd = Y+"/"+M+"/"+D+"/"
   var H = toDoubleDigits(hh);
   var M = toDoubleDigits(mm);
   $('.nowtime-start').click(function(e){
@@ -32,8 +28,8 @@ $(function() {
     var startTime=$form.find('input[name="start_time"]').val();
     var lastTime=$form.find('input[name="last_time"]').val();
     //年から時間まで作った後に時間部分を数値として切り出す
-    var fromTime = new Date(ymd+" "+startTime).getTime();
-    var toTime = new Date(ymd+' '+lastTime).getTime();
+    var fromTime = new Date("2020/5/25/"+startTime).getTime();
+    var toTime = new Date("2020/5/25/"+lastTime).getTime();
     //時間計算
     var Ms = toTime-fromTime
     var h = ''
@@ -41,7 +37,7 @@ $(function() {
     h = Ms/60000
     m = (Ms-h*60000)/100
     var x = h+m;
-    alert (ymd);
+
     if (x<=0){
       adultPrice.text('大人料金：0円');
       studentPrice.text('学生料金：0円');
