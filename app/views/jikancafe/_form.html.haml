@@ -1,12 +1,12 @@
 %form
   .time
   %dl
-    %p
+    %div
       %dt 開始時間
       %dd
         %input{:autofocus => "true", :max => "23:00", :min => "11:00", :name => "start_time", :required => "", :type => "time", :value => "11:00"}/
         %button.nowtime-start 現在時間
-    %p
+    %div
       %dt 終了時間
       %dd
         %input{:name => "last_time", :required => "", :type => "time", :value => "11:00"}/
