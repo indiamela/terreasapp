@@ -31,8 +31,10 @@ $(function() {
     // var dt = new Date(at.replace(/([\+|\-])([0-9]{2})([0-9]{2})$/,"$1$2:$3"));
     var fromTime = new Date("2020/5/25/"+startTime.replace(/([\+|\-])([0-9]{2})([0-9]{2})$/,"$1$2:$3")).getTime();
     var toTime = new Date("2020/5/25/"+lastTime.replace(/([\+|\-])([0-9]{2})([0-9]{2})$/,"$1$2:$3")).getTime();
+    var at = '2018-11-28T11:30:30+0900';
+    var dt = new Date(at.replace(/([\+|\-])([0-9]{2})([0-9]{2})$/,"$1$2:$3"));
     //時間計算
-    var Ms = toTime-fromTime
+    var Ms = dt
     var h = ''
     var m = ''
     h = Ms/60000
