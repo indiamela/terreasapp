@@ -1,67 +1,71 @@
 .jikan{
-  display: inline-block;
+  display: block;
+  margin: 0 auto;
+  width: 600px;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  h1{
+  .title{
     margin: 20px;
-    font-size: 30px;
+    h1{
+      font-size: 30px;
+    }
   }
-
-  
-  .active {
-    background: #67c5ff;
-    color: white;
-  }
-  
-  ul.tabmenu{
-    .tab-btn {
-      @include a-button();
-      width: 70px;
-      color: $black;
-      margin: 20px 10px;
-      a{
-        color: $gray;
-        font-size: 20px;
+  .tab{
+    width: 100%;
+    ul.tabmenu{
+      .active {
+        background: #67c5ff;
+        color: white;
+      }
+      .tab-btn {
+        @include a-button();
+        width: 70px;
+        color: $black;
+        margin: 20px 10px;
+        a{
+          color: $gray;
+          font-size: 20px;
+        }
       }
     }
   }
-  ul.contents {
-    margin: 20px;
-    .content {
-      display: none;
-      form {
-        dl{
-          font-size: 20px;
-          p{
-            margin: 30px 0;
-            dt {
-            }
-            dd {
-              .nowtime-start, .nowtime-end {
-                padding-left: 20px 0;
+  .contents{
+    width: 100%;
+    margin: 20px 0;
+    ul.contents {
+      .content {
+        display: none;
+        form {
+          dl{
+            font-size: 20px;
+            p{
+              margin: 30px 0;
+              dt {
+              }
+              dd {
+                .nowtime-start, .nowtime-end {
+                  padding-left: 20px 0;
+                }
               }
             }
           }
+          .calcbutton{
+            margin: 50px 0;
+            font-size: 30px;
+            width: 100%;
+            @include a-button();
+          }
         }
-        .calcbutton{
-          margin: 50px 0;
-          font-size: 30px;
-          width: 100%;
-          @include a-button();
+        .price {
+          font-size: 25px;
+          font-weight: bold;
+          p {
+            padding: 10px 0;
+          }
         }
       }
-      .price {
-        font-size: 25px;
-        font-weight: bold;
-        p {
-          padding: 10px 0;
-        }
+      .show {
+        display: block;
       }
-    }
-    .show {
-      display: block;
     }
   }
 }

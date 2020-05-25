@@ -1,6 +1,7 @@
-.wrapper.jikan
+.jikan
   .title
     %h1.title 時間カフェ計算
+  .tab
     %ul.tabmenu
       %li.tab-btn.active
         %a{:href => "#1"} k1
@@ -23,6 +24,7 @@
         %a{:href => "#9"} k9
       %li.tab-btn
         %a{:href => "#10"} k10
+  .contents
     %ul.contents
       %li#1.content.show= render partial:'form'
       %li#2.content= render partial:'form'

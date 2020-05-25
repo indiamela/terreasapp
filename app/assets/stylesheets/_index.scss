@@ -5,7 +5,12 @@ body {
   height: 100vh;
   background-color: $lightgray;
 }
-h1 {
+@media screen and (max-width:600px){
+  .jikan {
+    width: 100%;
+  }
+}
+h1{
   font-size: 30px;
 }
 a {
@@ -15,6 +20,7 @@ a {
   text-decoration: none;
   box-sizing: border-box;
 }
+
 @mixin a-button(){
   color: #67c5ff;
   display: inline-block;
