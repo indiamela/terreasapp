@@ -61,7 +61,6 @@
         .price {
           font-size: 25px;
           font-weight: bold;
-          margin-bottom: 10px;
           p {
             padding: 10px 0;
           }
@@ -69,6 +68,7 @@
       }
       .show {
         display: block;
+        margin-bottom: 10px;
       }
     }
   }
@@ -78,6 +78,7 @@
   .jikan{
     width: 100%;
     padding: 10px;
+    height: calc(100vh - 200px);
     .tab{
       ul.tabmenu{
         margin-bottom: 10px;
