@@ -51,18 +51,25 @@
   float: right;
   .content {
     &__top {
-      width: 100v;
+      width: 100%;
       height: 100px;
-      #button {
-        float: right;
-        width: 100px;
-        &__edit{
-          padding: 5px 10px 0 0;
-          float: left;
-          @include clearfix();
+      .headarea{
+        width: 100%;
+        height: 50px;
+        margin:10px;
+        #button {
+          float: right;
+          &__edit{
+            padding: 5px 10px 0 0;
+            float: left;
+          }
+          &__delete {
+            float: left;
+            @include clearfix;
+          }
         }
-        &__delete {
-          float: left;
+        #date {
+          float: right;
         }
       }
       .main-title {
