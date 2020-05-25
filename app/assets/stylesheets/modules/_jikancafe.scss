@@ -77,7 +77,7 @@
   .jikan{
     width: 100%;
     padding: 10px;
-    height: 100vh;
+    height: calc(100vh - 100px);
     .tab{
       ul.tabmenu{
         margin-bottom: 10px;
