@@ -41,7 +41,7 @@ $(function() {
     h = Ms/60000
     m = (Ms-h*60000)/100
     var x = h+m;
-    alert (startTime);
+    alert (x);
     if (x<=0){
       adultPrice.text('大人料金：0円');
       studentPrice.text('学生料金：0円');
