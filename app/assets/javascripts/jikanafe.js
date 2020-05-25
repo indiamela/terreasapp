@@ -28,8 +28,9 @@ $(function() {
     var startTime=$form.find('input[name="start_time"]').val();
     var lastTime=$form.find('input[name="last_time"]').val();
     //年から時間まで作った後に時間部分を数値として切り出す
-    var fromTime = new Date("2020/5/25/"+startTime).getTime();
-    var toTime = new Date("2020/5/25/"+lastTime).getTime();
+    // var dt = new Date(at.replace(/([\+|\-])([0-9]{2})([0-9]{2})$/,"$1$2:$3"));
+    var fromTime = new Date("2020/5/25/"+startTime.replace(/([\+|\-])([0-9]{2})([0-9]{2})$/,"$1$2:$3")).getTime();
+    var toTime = new Date("2020/5/25/"+lastTime.replace(/([\+|\-])([0-9]{2})([0-9]{2})$/,"$1$2:$3")).getTime();
     //時間計算
     var Ms = toTime-fromTime
     var h = ''
