@@ -28,8 +28,8 @@ $(function() {
     var startTime=$form.find('input[name="start_time"]').val();
     var lastTime=$form.find('input[name="last_time"]').val();
     //年から時間まで作った後に時間部分を数値として切り出す
-    var fromTime = new Date("2020/5/25/"+''+startTime).getTime();
-    var toTime = new Date("2020/5/25/"+''+lastTime).getTime();
+    var fromTime = new Date("2020/5/25/"+''+startTime+":00");
+    var toTime = new Date("2020/5/25/"+''+lastTime+":00");
     //時間計算
     var Ms = toTime-fromTime
     var h = ''
