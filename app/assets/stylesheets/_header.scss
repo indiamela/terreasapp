@@ -28,7 +28,7 @@
     align-items: center;
     ul{
       li{
-        @include bluebutton();
+        @include a-button();
         &:hover{
           background: #67c5ff;
           color: white;
