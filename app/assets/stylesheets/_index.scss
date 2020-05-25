@@ -32,9 +32,6 @@ a {
     background: #67c5ff;
     color: white;
   }
-  &:visited {
-    color: #67c5ff;
-  }
 }
 @mixin clearfix(){
   &:after{

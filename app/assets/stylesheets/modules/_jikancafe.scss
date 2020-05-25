@@ -9,10 +9,6 @@
   .tab{
     width: 100%;
     ul.tabmenu{
-      .active {
-        background: #67c5ff;
-        color: white;
-      }
       .tab-btn {
         @include a-button();
         width: 70px;
@@ -22,6 +18,10 @@
           color: $gray;
           font-size: 20px;
         }
+      }
+      .active {
+        background: #67c5ff;
+        color: white;
       }
     }
   }

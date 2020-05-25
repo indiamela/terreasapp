@@ -128,7 +128,7 @@ $(function() {
     return false;
   });
   $(".tabmenu a").click(function() {  //tabmenuクラスのクリックイベント
-    $(this).parent().addClass("active").siblings(".active").removeClass("active"); //activeくラスを加え、同階層のactiveクラスを削除している
+    $(this).parent(".tab-btn").addClass("active").siblings(".active").removeClass("active"); //activeくラスを加え、同階層のactiveクラスを削除している
     var tabContents = $(this).attr("href");//hrefのidを取得
     $(tabContents).addClass("show").siblings(".show").removeClass("show");
     return false;
