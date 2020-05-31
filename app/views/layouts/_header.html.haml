@@ -1,7 +1,11 @@
 .header
   .header__left
     .logo
-      %h1 TERRE-á-S
+      %h1
+        =link_to('TERRE-á-S', root_path)
     .search
   .header__right
     %ul.buttons
+      %li 
+        =link_to("新規作成", new_top_path)
+

@@ -19,6 +19,11 @@
           padding: 5px 10px 0 0;
         }
         .title {
+          cursor: pointer;
+          .accordion{
+            padding: 5px 0 0 0;
+            float: left;
+          }
         }
       }
     }
@@ -31,12 +36,14 @@
     height: 100%;
     padding: 5px;
     border-right: solid 3px white;
+    overflow: scroll;
     ul{
       li {
         background-color: $white;
         padding: 2px 5px;
         margin-bottom: 5px;
         @include clearfix();
+        @include skelton_btn();
         #date {
           font-size: 15px;
           float: left;
@@ -54,34 +61,42 @@
     &__top {
       width: 100%;
       height: 100px;
+      width: calc(100% - 10px);
       .headarea{
         width: 100%;
         height: 50px;
-        margin:10px;
-        #button {
+        .headbutton {
           float: right;
+          @include clearfix();
           &__edit{
-            padding: 5px 10px 0 0;
             float: left;
+            padding-right: 20px;
           }
           &__delete {
             float: left;
-            @include clearfix;
           }
         }
-        #date {
+        .headdate {
           float: right;
+          padding-right: 40px;
         }
       }
       .main-title {
         display: block;
-        width: calc(100% - 20px);
         background-color: $white;
-        padding: 5px;
+        padding: 5px 30px;
+        border-radius: 4px;
       }
     }
     &__bottom{
-
+      border-radius: 4px;
+      background-color: $white;
+      display: block;
+      height: calc(100vh - 270px);
+      width: calc(100% - 10px);
+      padding: 30px;
+      margin-top: 30px;
+      overflow: scroll;
     }
   }
 }

@@ -5,22 +5,24 @@
         .icon 
           =icon("fas", "bell")
         .title
-          変更のお知らせ
+          最新のお知らせ
       %li.category__list 
         .icon 
           =icon("fas", "book")
         .title
-          マニュアル
+          カテゴリ
+          .accordion
+          =icon("fas","caret-down")
       %li.category__list
         .icon 
           =icon("fas", "clock")
         .title
-          時間カフェ計算
+          = link_to('時間カフェ計算', jikancafe_index_path)
   %section.ItemMenu
     %ul.item
       %li
         #title
-          営業時間変更のお知らせ
+          = link_to('営業時間変更のお知らせ', '#')
         #date
           2020/02/28
       %li

@@ -10,7 +10,7 @@ h1{
   font-size: 30px;
 }
 a {
-  color: $gray;
+  color: inherit;
 }
 *{
   text-decoration: none;
@@ -23,7 +23,7 @@ a {
   padding: 0.3em 1em;
   text-decoration: none;
   background-color: white;
-  color: #67c5ff;
+  color: $gray;
   border: solid 2px #67c5ff;
   border-radius: 3px;
   transition: .4s;
@@ -34,9 +34,23 @@ a {
   }
 }
 @mixin clearfix(){
-  &:after{
+  &::after{
     content:" ";
     display:block;
     clear:both;
+  }
+}
+@mixin skelton_btn(){
+  display: block;
+	position: relative;
+  border:1px solid #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+  -webkit-tap-highlight-color: transparent;
+  &:hover{
+    background: #F2F2F2;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 5px 10px 0 rgba(0,0,0,0.12), 0 3px 20px 0 rgba(0,0,0,0.12), 0 5px 6px -2px rgba(0,0,0,0.2);
   }
 }

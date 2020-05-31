@@ -16,9 +16,9 @@
       h1{
         font-size: 50px;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        color: $white;
       }
-      color: $white;
-    }
+    } 
   }
   &__right{
     float:right;
@@ -29,11 +29,6 @@
     ul{
       li{
         @include a-button();
-        &:hover{
-          background: #67c5ff;
-          color: white;
-          cursor: pointer;
-        }
       }
     }
   }
