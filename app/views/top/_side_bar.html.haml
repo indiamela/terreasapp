@@ -20,13 +20,37 @@
           = link_to('時間カフェ計算', jikancafe_index_path)
   %section.ItemMenu
     %ul.item
+      %li#additem
+        =link_to new_top_path do
+          =icon("fas","plus")
       %li
         #title
-          = link_to('営業時間変更のお知らせ', '#')
+          = link_to('ホールケーキの発注', '#')
         #date
-          2020/02/28
+          2020/03/28
       %li
         #title
-          営業時間変更のお知らせ
+          = link_to('クレジット機 接続不良の対処', '#')
         #date
-          2020/02/28
+          2020/03/25
+      %li
+        #title
+          = link_to('テラス席カーテンの開閉', '#')
+        #date
+          2020/03/25
+      %li
+        #title
+          = link_to('現行貸切プラン、料金設定一覧', '#')
+        #date
+          2020/03/22
+      %li
+        #title
+          = link_to('ホールケーキの予約対応', '#')
+        #date
+          2020/03/21
+      %li
+        #title
+          = link_to('生クリームの作り方', '#')
+        #date
+          2020/03/21
+
