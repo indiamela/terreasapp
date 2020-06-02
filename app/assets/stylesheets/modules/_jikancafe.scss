@@ -70,15 +70,18 @@
 }
 
 @media screen and (max-width:600px){
+  .header{
+    display: none;
+  }
   .jikan{
     width: 100%;
     padding: 10px;
-    height: calc(100vh - 200px);
+    height: 100vh;
     .tab{
       ul.tabmenu{
         margin-bottom: 10px;
         li.tab-btn{
-          width: 50px;
+          width: 40px;
           margin: 5px;
           padding: 0.3em 0;
           a{
