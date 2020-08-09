@@ -4,7 +4,7 @@
 Jikan-cafe
 
 # DEMO
-![Uploading IMB_RnVFIW.GIF…]()
+![IMB_RnVFIW](https://user-images.githubusercontent.com/57088740/89726437-8d8b1880-da55-11ea-8e08-024b65eced5a.GIF)
 
 # Feature
 ![1](https://user-images.githubusercontent.com/57088740/89726376-faea7980-da54-11ea-9f93-f13bf0f2045c.jpg)
