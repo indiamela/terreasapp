@@ -1,8 +1,3 @@
-
-# Name
-
-Jikan-cafe
-
 # DEMO
 ![IMB_RnVFIW](https://user-images.githubusercontent.com/57088740/89726437-8d8b1880-da55-11ea-8e08-024b65eced5a.GIF)
 
